@@ -1,0 +1,44 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(to right,rgb(0, 255, 136),rgba(255, 255, 255, 0.332) );
+}
+
+a {
+  color: black;
+}
+
+h1{
+  text-align: center;
+  text-decoration:overline;
+  font: 80px 'Comic Sans MS','Comic Sans';
+}
+p{
+  text-align: center;
+  font: 20px 'Comic Sans MS', 'Comic Sans';
+}
+
+.container{
+  text-align: center;
+  font: 20px 'Comic Sans MS', 'Comic Sans';
+}
+
+label{
+  font:14px 'Comic Sans MS', 'Comic Sans';
+}
+
+ul{
+  text-align: center;
+  font:14px 'Comic Sans MS', 'Comic Sans';
+}
+
+li {
+  text-align: center;
+  font:14px 'Comic Sans MS', 'Comic Sans';
+}
+
+form{
+  text-align: center;
+}
+
+

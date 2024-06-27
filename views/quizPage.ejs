@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+
+  <h1>Your Quiz</h1>
+  
+  <div class="quiz-container">
+    <form method="POST" action="/users/next">
+      <div class="question">
+        <p><%= currentQuestionIndex + 1 %>. <%- quizData[currentQuestionIndex].question %></p>
+        <ul>
+          <% if (quizData[currentQuestionIndex].type === 'multiple') { %>
+            <% quizData[currentQuestionIndex].incorrect_answers.concat(quizData[currentQuestionIndex].correct_answer).sort().forEach(function(answer) { %>
+              <li>
+                <input type="radio" name="answer" value="<%- answer %>" required /> <%- answer %>
+              </li>
+            <% }); %>
+          <% } else { %>
+            <li>
+              <input type="radio" name="answer" value="True" required /> True
+            </li>
+            <li>
+              <input type="radio" name="answer" value="False" required /> False
+            </li>
+          <% } %>
+        </ul>
+      </div>
+      <input type="hidden" name="quizData" value='<%= JSON.stringify(quizData) %>'>
+      <input type="hidden" name="currentQuestionIndex" value="<%= currentQuestionIndex %>">
+      <input type="hidden" name="userAnswers" value='<%= JSON.stringify(userAnswers) %>'>
+      <br>
+      <input type="submit" value="Next">
+    </form>
+  </div>
+</body>
+</html>

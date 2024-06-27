@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %> , powered by:</p>
+
+    <div class = "container">
+    <img src="/images/openTriviaDatabase.png" width="200px" >
+    
+
+    <p>Choose your desired settings to get started:</p>
+<form method="POST" action="users/submit">
+  <div>
+    <label>Number of Questions:</label>
+    <input type="number" name="num-questions" min="1" max="50">
+  </div>
+  <div>
+    <label>Category:</label>
+    <select name="Category">
+      <option value="9">General Knowledge</option>
+      <option value="21">Sports</option>
+      <option value="22">Geography</option>
+      <option value="27">Animals</option>
+      <option value="24">Politics</option>
+    </select>
+  </div>
+  <div>
+    <label>Difficulty:</label>
+    <select name="Difficulty">
+      <option value="easy">Easy PZ Lemon Squeezy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+  </div>
+  <div>
+    <label>Type:</label>
+    <select name="Type">
+      <option value="multiple">Multiple Choice</option>
+      <option value="boolean">True or False</option>
+    </select>
+  </div>
+  <br>
+  <input type="submit" value="Let's go!">
+</form>
+
+    
+    </form>
+    </div>
+
+  </body>
+</html>
